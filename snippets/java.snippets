@@ -54,10 +54,19 @@ snippet imp
 	implements ${0}
 ##
 ## Comments
+snippet //
+	// ${1}
+	${0}
+snippet //z "可折叠的注释"
+	// => ${1} ------------------------------------------------------------ {{{ 
+	${2}
+	// }}}
+	${0}
 snippet /*
 	/*
-	 * ${0}
+	 * ${1}
 	 */
+	${0}
 ##
 ## Constants
 snippet co
@@ -182,8 +191,10 @@ snippet findbyid
 ## Javadocs
 snippet /**
 	/**
-	 * ${0}
+	 * ${1}
 	 */
+	
+	${0}
 snippet @au
 	@author `system("grep \`id -un\` /etc/passwd | cut -d \":\" -f5 | cut -d \",\" -f1")`
 snippet @br
