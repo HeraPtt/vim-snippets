@@ -195,16 +195,30 @@ snippet /**
 	 */
 	
 	${0}
-snippet @au
-	@author `system("grep \`id -un\` /etc/passwd | cut -d \":\" -f5 | cut -d \",\" -f1")`
-snippet @br
+#snippet @au
+#	@author `system("grep \`id -un\` /etc/passwd | cut -d \":\" -f5 | cut -d \",\" -f1")`
+#snippet @br
+#	@brief ${0:Description}
+#snippet @fi
+#	@file ${0:`vim_snippets#Filename("$1")`}.java
+#snippet @pa
+#	@param ${0:param}
+#snippet @re
+#	@return ${0:param}
+snippet 2au
+	@author ${1:phoenix}${0}
+snippet 2v "版本号"
+	@version ${1:v1.0}${0}
+snippet 2br
 	@brief ${0:Description}
-snippet @fi
+snippet 2fi
 	@file ${0:`vim_snippets#Filename("$1")`}.java
-snippet @pa
+snippet 2pa
 	@param ${0:param}
-snippet @re
+snippet 2re
 	@return ${0:param}
+snippet 2ov
+	@Override ${1:param}${0}
 ##
 ## Logger Methods
 snippet debug
