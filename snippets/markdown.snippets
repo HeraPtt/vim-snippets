@@ -79,8 +79,12 @@ snippet ====
 	`repeat('=', strlen(getline(line('.') - 3)))`
 
 	${0}
-snippet -
-	-   ${0}
+snippet list
+	- ${0}
+snippet clist "任务列表未勾选"
+	- [ ] ${0}
+snippet clistc "任务列表已勾选"
+	- [x] ${0}
 snippet ----
 	`repeat('-', strlen(getline(line('.') - 3)))`
 
