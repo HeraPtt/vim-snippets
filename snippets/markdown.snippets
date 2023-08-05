@@ -81,9 +81,10 @@ snippet ====
 	${0}
 snippet list
 	- ${0}
-snippet clist "任务列表未勾选"
-	- [ ] ${0}
-snippet clistc "任务列表已勾选"
+snippet tlu "任务列表未勾选"
+	- [ ] ${1}
+	${0}
+snippet tlc "任务列表已勾选"
 	- [x] ${0}
 snippet ----
 	`repeat('-', strlen(getline(line('.') - 3)))`
