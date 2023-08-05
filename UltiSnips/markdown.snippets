@@ -109,19 +109,19 @@ endsnippet
 # Text formatting #
 ###################
 
-snippet * "italics"
+snippet m* "italics"
 *${1:${VISUAL}}*$0
 endsnippet
 
-snippet ** "bold"
+snippet m** "bold"
 **${1:${VISUAL}}**$0
 endsnippet
 
-snippet *** "bold italics"
+snippet m*** "bold italics"
 ***${1:${VISUAL}}***$0
 endsnippet
 
-snippet /* "Comment"
+snippet m/* "Comment"
 <!-- ${1:${VISUAL}} -->$0
 endsnippet
 
@@ -143,8 +143,7 @@ endsnippet
 snippet cbl "Codeblock" b
 \`\`\`$1
 ${2:${VISUAL}}
-\`\`\`
-$0
+\`\`\`$0
 endsnippet
 
 snippet refl "Reference Link"
@@ -159,10 +158,19 @@ snippet fnt "Footnote"
 [^$1]:${2:Text}
 endsnippet
 
+# snippet detail "Disclosure"
+# <details${3: open=""}>
+#   ${1:<summary>${2}</summary>}
+# 
+#   $0
+# </details>
+# endsnippet
 snippet detail "Disclosure"
-<details${3: open=""}>
-  ${1:<summary>${2}</summary>}$0
-</details>
+<details>
+  <summary>${1}</summary>
+
+  $2
+</details>$0
 endsnippet
 
 post_jump "create_table(snip)"
