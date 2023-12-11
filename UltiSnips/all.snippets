@@ -111,3 +111,42 @@ snippet uuid "Random UUID" w
 endsnippet
 
 # vim:ft=snippets:
+snippet <c "CTRL命令" b
+${1:nnoremap} <C-${2:Command}>$0
+endsnippet
+
+snippet \c "CTRL命令含\" b
+\<C-${1:Command}\>$0
+endsnippet
+
+snippet <s "SHIFT命令" b
+${1:nnoremap} <S-${2:Command}>$0
+endsnippet
+
+snippet \s "SHIFT命令含\" b
+\<S-${1:Command}\>$0
+endsnippet
+
+snippet <a "ALT命令" b
+${1:nnoremap} <A-${2:Command}>$0
+endsnippet
+
+snippet \a "ALT命令含\" b
+\<A-${1:Command}\>$0
+endsnippet
+
+snippet cr "回车符" b
+<CR>$0
+endsnippet
+
+snippet <l "leader键" b
+${1:nnoremap} <leader>$0
+endsnippet
+
+snippet esc "ESC键" b
+<ESC>$0
+endsnippet
+
+snippet tab "TAB键" b
+<TAB>$0
+endsnippet
