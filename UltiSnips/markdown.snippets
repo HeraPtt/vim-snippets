@@ -108,7 +108,7 @@ endsnippet
 ################
 # Common stuff #
 ################
-snippet link "Link to something"
+snippet lk "Link to something"
 [${1:${VISUAL:Text}}](${3:https://${2:www.url.com}})$0
 endsnippet
 
@@ -124,6 +124,10 @@ snippet cbl "Codeblock" b
 \`\`\`$1
 ${2:${VISUAL}}
 \`\`\`$0
+endsnippet
+
+snippet clt "Call outs" b
+> [!${1:${VISUAL:note}}]${2:${VISUAL:+}} ${3:${VISUAL:TITLE}}
 endsnippet
 
 snippet refl "Reference Link"
