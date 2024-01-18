@@ -78,12 +78,12 @@ endsnippet
 
 snippet br "break"
 break;
-
 endsnippet
 
 snippet cs "case" b
 case $1:
 	$2
+  break;
 $0
 endsnippet
 
@@ -160,7 +160,7 @@ snip.rv = snip.basename or "untitled"` {
 endsnippet
 
 snippet cl "class" b
-public class ${1:`!p
+${1:public }class ${2:`!p
 snip.rv = snip.basename or "untitled"`} {
 	$0
 }
@@ -181,14 +181,14 @@ endsnippet
 
 snippet elif "else if"
 else if ($1)`!p nl(snip)`{
-	$0${VISUAL}
-}
+	$2${VISUAL}
+} $0
 endsnippet
 
 snippet el "else" w
 else`!p nl(snip)`{
-	$0${VISUAL}
-}
+	$1${VISUAL}
+}$0
 endsnippet
 
 snippet fi "final" b
@@ -215,8 +215,8 @@ endsnippet
 
 snippet if "if" b
 if ($1)`!p nl(snip)`{
-	$0${VISUAL}
-}
+	$2${VISUAL}
+} $0
 endsnippet
 
 snippet imt "import junit_framework_TestCase;"  b
@@ -397,7 +397,8 @@ endsnippet
 
 snippet sw "switch" b
 switch ($1)`!p nl(snip)`{
-	case $2: $0
+	case $2: 
+	  $0
 }
 endsnippet
 
