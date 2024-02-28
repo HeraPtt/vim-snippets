@@ -111,9 +111,14 @@ endsnippet
 
 snippet if "if (condition) { ... }"
 if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
-	${VISUAL}$0
-}
+	${VISUAL}$2
+} $0
 endsnippet
+# snippet if "if (condition) { ... }"
+# if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
+# 	${VISUAL}$0
+# }
+# endsnippet
 
 snippet ife "if (condition) { ... } else { ... }"
 if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
