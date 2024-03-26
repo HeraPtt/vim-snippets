@@ -122,11 +122,18 @@ endsnippet
 
 snippet ife "if (condition) { ... } else { ... }"
 if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
-	${VISUAL}$0
+	${VISUAL}$2
 }`!p snip.rv = keyword_spacing(snip)`else`!p snip.rv = keyword_spacing(snip)`{
-	${2}
-}
+	${VISUAL}$3
+} ${0}
 endsnippet
+# snippet ife "if (condition) { ... } else { ... }"
+# if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
+# 	${VISUAL}$0
+# }`!p snip.rv = keyword_spacing(snip)`else`!p snip.rv = keyword_spacing(snip)`{
+# 	${2}
+# }
+# endsnippet
 
 snippet switch
 switch`!p snip.rv = keyword_spacing(snip)`(${VISUAL}${1:expression}) {
