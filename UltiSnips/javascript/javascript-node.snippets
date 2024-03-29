@@ -31,26 +31,12 @@ snippet pipe "pipe"
 pipe(${1:stream})$2
 endsnippet
 
-# Express snippets
-
-snippet enew "new express object"
-${1:const} ${2:app} = express();
+snippet property "property 属性: 键值匹配"
+${1}("$2", $3);
 endsnippet
 
-snippet eget "express get"
-${1:app}.get('$2', $3);
-endsnippet
-
-snippet epost "express POST"
-${1:app}.post('$2', $3);
-endsnippet
-
-snippet eput "express PUT"
-${1:app}.put('$2', $3);
-endsnippet
-
-snippet edelete "express DELETE"
-${1:app}.delete('$2', $3);
+snippet alias "alias：自动加括弧"
+${1}()
 endsnippet
 
 # process snippets
