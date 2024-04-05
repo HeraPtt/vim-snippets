@@ -1,52 +1,23 @@
-# Functions
-# prototype
-snippet proto
-	${1:class_name}.prototype.${2:method_name} = function(${3}) {
-		${0:${VISUAL}}
-	};
-# Function
+# functions
+# function
 snippet fun "function"
 	function ${1:function_name}(${2}) {
-		${0:${VISUAL}}
+		${0:${visual}}
 	}
-# Asynchronous Function
-snippet asf "async function"
-	async function ${1:function_name}(${2}) {
-		${0:${VISUAL}}
-	}
-# Anonymous Function
-snippet anf "" w
+# anonymous function
+snippet funa "" w
 	function(${1}) {
-		${0:${VISUAL}}
+		${0:${visual}}
 	}
-# Anonymous Function assigned to variable
-snippet vaf
+# anonymous function assigned to variable
+snippet funa.v
 	var ${1:function_name} = function(${2}) {
-		${0:${VISUAL}}
+		${0:${visual}}
 	};
-# Function assigned to variable
-snippet vf
+# function assigned to variable
+snippet fun.v
 	var ${1:function_name} = function $1(${2}) {
-		${0:${VISUAL}}
-	};
-# Immediate function
-snippet (f
-	(function(${1}) {
-		${0:${VISUAL}}
-	}(${2}));
-# Minify safe iife
-snippet ;fe
-	;(function(${1}) {
-		${0:${VISUAL}}
-	}(${2}))
-# self-defining function
-snippet sdf
-	var ${1:function_name} = function (${2:argument}) {
-		${3}
-
-		$1 = function ($2) {
-			${0:${VISUAL}}
-		};
+		${0:${visual}}
 	};
 # Flow control
 # if
@@ -102,16 +73,8 @@ snippet for "for (...) {...}"
 	for (let ${1:i} = 0, ${2:len} = ${3:Things.length}; $1 < $2; $1++) {
 		${0:${VISUAL}}
 	}
-snippet forr "reversed for (...) {...}"
-	for (let ${2:i} = ${1:Things.length} - 1; $2 >= 0; $2--) {
-		${0:${VISUAL}}
-	}
 snippet wh "(condition) { ... }"
 	while (${1:true}) {
-		${0:${VISUAL}}
-	}
-snippet wht "(true) { ... }"
-	while (true) {
 		${0:${VISUAL}}
 	}
 snippet do "do { ... } while (condition)"
@@ -124,121 +87,6 @@ snippet fori
 		${0:$2[$1]}
 	}
 # Objects
-# Object Method
-snippet :f
-	${1:method_name}: function (${2:attribute}) {
-		${0:${VISUAL}}
-	},
-# hasOwnProperty
-snippet has
-	hasOwnProperty(${0})
-# singleton
-snippet sing
-	function ${1:Singleton} (${2:argument}) {
-		// the cached instance
-		var instance;
-
-		// rewrite the constructor
-		$1 = function $1($2) {
-			return instance;
-		};
-
-		// carry over the prototype properties
-		$1.prototype = this;
-
-		// the instance
-		instance = new $1();
-
-		// reset the constructor pointer
-		instance.constructor = $1;
-
-		${0}
-
-		return instance;
-	}
-# Crockford's object function
-snippet obj
-	function object(o) {
-		function F() {}
-		F.prototype = o;
-		return new F();
-	}
-# Define multiple properties
-snippet props
-	var ${1:my_object} = Object.defineProperties(
-		${2:new Object()},
-		{
-			${3:property} : {
-				get : function $1_$3_getter() {
-					// getter code
-				},
-				set : function $1_$3_setter(value) {
-					// setter code
-				},
-				value        : ${4:value},
-				writeable    : ${5:boolean},
-				enumerable   : ${6:boolean},
-				configurable : ${0:boolean}
-			}
-		}
-	);
-# Define single property
-snippet prop
-	Object.defineProperty(
-		${1:object},
-		'${2:property}',
-		{
-			get : function $1_$2_getter() {
-				// getter code
-			},
-			set : function $1_$2_setter(value) {
-				// setter code
-			},
-			value        : ${3:value},
-			writeable    : ${4:boolean},
-			enumerable   : ${5:boolean},
-			configurable : ${0:boolean}
-		}
-	);
-# Documentation
-# docstring
-snippet /**
-	/**
-	 * ${0:description}
-	 *
-	 */
-snippet @par
-	@param {${1:type}} ${2:name} ${0:description}
-snippet @ret
-	@return {${1:type}} ${0:description}
-# JSON.parse
-snippet jsonp
-	JSON.parse(${0:jstr});
-# JSON.stringify
-snippet jsons
-	JSON.stringify(${0:object});
-# DOM selectors
-# Get elements
-snippet get
-	getElementsBy${1:TagName}('${0}')
-# Get element
-snippet gett
-	getElementBy${1:Id}('${0}')
-# Elements by class
-snippet by.
-	${1:document}.getElementsByClassName('${0:class}')
-# Element by ID
-snippet by#
-	${1:document}.getElementById('${0:element ID}')
-# Query selector
-snippet qs
-	${1:document}.querySelector('${0:CSS selector}')
-# Query selector all
-snippet qsa
-	${1:document}.querySelectorAll('${0:CSS selector}')
-# Debugging
-snippet de
-	debugger;
 snippet cl "console.log"
 	console.log(${0});
 snippet cd "console.debug"
@@ -313,51 +161,11 @@ snippet clac
 			${0:${VISUAL}}
 		}
 	}
-snippet foro "for (const prop of object}) { ... }"
-	for (const ${1:prop} of ${2:object}) {
-		${0:$1}
-	}
-snippet forl "for (let prop of object}) { ... }"
-	for (let ${1:prop} of ${2:object}) {
-		${0:$1}
-	}
-snippet fun*
-	function* ${1:function_name}(${2}) {
-		${0:${VISUAL}}
-	}
-snippet c=>
-	const ${1:function_name} = (${2}) => {
-		${0:${VISUAL}}
-	}
-snippet ca=>
-	const ${1:function_name} = async (${2}) => {
-		${0:${VISUAL}}
-	}
-snippet caf
-	const ${1:function_name} = (${2}) => {
-		${0:${VISUAL}}
-	}
-snippet casf
-	const ${1:function_name} = async (${2}) => {
-		${0:${VISUAL}}
-	}
 snippet =>
 	(${1}) => {
 		${0:${VISUAL}}
 	}
-snippet af "() =>"
-	(${1}) => ${0:${VISUAL}}
-snippet afb "() => {}"
-	(${1}) => {
+snippet =>path
+	("${1}", (${2:req, res}) => {
 		${0:${VISUAL}}
-	}
-snippet sym
-	const ${1} = Symbol('${0}');
-snippet ed
-	export default ${0}
-snippet ${
-	\${${1}}${0}
-snippet as "async"
-	async ${0}
-snippet aw "await"
-	await ${0:${VISUAL}}
+	})
