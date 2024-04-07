@@ -1,0 +1,19 @@
+# module exports
+snippet ex
+	module.exports = ${1};
+# require
+snippet re
+	const ${1} = require('${2:module_name}');
+# http. User js function snippet as handler
+snippet http
+	http.createServer(${1:handler}).listen(${2:port_number});
+# net 
+snippet net
+	net.createServer(function(${1:socket}){
+		${1}.on('data', function('data'){
+		  ${2}
+		]});
+		${1}.on('end', function(){
+		  ${3}
+		});
+	}).listen(${4:8124});

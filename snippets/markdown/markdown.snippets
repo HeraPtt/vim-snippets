@@ -1,0 +1,66 @@
+# Markdown
+
+# Includes octopress (http://octopress.org/) snippets
+
+# The suffix `c` stands for "Clipboard".
+
+###########################
+# Sections and Paragraphs #
+###########################
+snippet 1# "Section #" b
+	# ${1:Section Name}
+
+	$0
+
+
+snippet 2# "Section ##" b
+	## ${1:Section Name}
+
+	$0
+
+
+snippet 3# "Section ###" b
+	### ${1:Section Name}
+
+	$0
+
+
+snippet 4# "Section ####" b
+	#### ${1:Paragraph Name}
+
+	$0
+
+
+snippet 5# "Section #####" b
+	##### ${1:Paragraph Name}
+
+	$0
+
+
+snippet f/ "italics"
+	*${1:Text}*$0
+snippet fb "Bold"
+	**${1:Text}**$0
+snippet --- Front matter
+	---
+	$0
+	---
+
+################
+# Common stuff #
+################
+snippet lk "Link"
+  [${1:Text}](${2:https://})$0
+
+snippet img "Image"
+	![${1:Text}](${2})$0
+
+snippet cil "Inline Code"
+  \`${1:Text}\`$0
+
+
+snippet cbl "Codeblock"
+	\`\`\`$1
+	${2:Text}
+	\`\`\`$0
+
