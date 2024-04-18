@@ -2,33 +2,33 @@
 # function
 snippet fun "function"
 	function ${1:function_name}(${2}) {
-		${0:${visual}}
+		${0:visual}
 	}
 # anonymous function
 snippet funa "" w
 	function(${1}) {
-		${0:${visual}}
+		${0:visual}
 	}
 # anonymous function assigned to variable
 snippet funa.v
 	var ${1:function_name} = function(${2}) {
-		${0:${visual}}
+		${0:visual}
 	};
 # function assigned to variable
 snippet fun.v
 	var ${1:function_name} = function $1(${2}) {
-		${0:${visual}}
+		${0:visual}
 	};
 # Flow control
 # if
 snippet if "if (condition) { ... }"
 	if (${1:true}) {
-		${0:${VISUAL}}
+		${0:VISUAL}
 	}
 # if ... else
 snippet ife "if (condition) { ... } else { ... }"
 	if (${1:true}) {
-		${0:${VISUAL}}
+		${0:VISUAL}
 	} else {
 		${2}
 	}
