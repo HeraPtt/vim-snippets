@@ -49,17 +49,14 @@ snippet ter Ternary: `condition ? true : false`
 # switch
 snippet switch
 	switch (${1:expression}) {
-		case '${3:case}':
-			${4}
-			break;
-		${0}
+		$2
 		default:
-			${2}
-	}
-snippet case "case 'xyz': ... break"
-	case '${1:case}':
-		${0:${VISUAL}}
-		break;
+			${3}
+	}$0
+snippet cs "case 'xyz': ... break"
+	case ${1:condition}:
+		${2:VISUAL}
+		break;$0
 snippet try "try { ... } catch(e) { ... }"
 	try {
 		${0:${VISUAL}}
@@ -86,8 +83,8 @@ snippet for "for (...) {...}"
 	}
 snippet wh "(condition) { ... }"
 	while (${1:true}) {
-		${0:${VISUAL}}
-	}
+		${2:VISUAL}
+	}$0
 snippet do "do { ... } while (condition)"
 	do {
 		${0:${VISUAL}}
