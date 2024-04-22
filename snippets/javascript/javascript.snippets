@@ -23,15 +23,19 @@ snippet fun.v
 # if
 snippet if "if (condition) { ... }"
 	if (${1:true}) {
-		${0:VISUAL}
-	}
+		${2:VISUAL}
+	}$0
+snippet el "else { ... }"
+   else {
+		${1:VISUAL}
+	}$0
 # if ... else
 snippet ife "if (condition) { ... } else { ... }"
 	if (${1:true}) {
-		${0:VISUAL}
+		${2:VISUAL}
 	} else {
-		${2}
-	}
+		${3:VISUAL}
+	}$0
 # tertiary conditional
 snippet ter Ternary: `condition ? true : false`
 	$1 ? $2: $0
