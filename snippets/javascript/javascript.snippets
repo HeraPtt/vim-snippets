@@ -78,8 +78,8 @@ snippet terr
 snippet ret
 	return ${0:result};
 snippet for "for (...) {...}"
-	for (let ${1:i} = 0, ${2:len} = ${3:Things.length}; $1 < $2; $1++) {
-		${4:VISUAL}
+	for (let ${1:i} = ${2:0}, ${3:len} = ${4:Things.length}; $1 < ${5:len}; $1++) {
+		${6:VISUAL}
 	}$0
 snippet wh "(condition) { ... }"
 	while (${1:true}) {
@@ -91,9 +91,9 @@ snippet do "do { ... } while (condition)"
 	} while ($1);
 # For in loop
 snippet fori
-	for (let ${1:prop} in ${2:object}) {
-		${0:$2[$1]}
-	}
+	for (let ${1:key} in ${2:obj}) {
+		${3:VISUAL}
+	}$0
 # Objects
 snippet cl "console.log"
 	console.log(${0});
