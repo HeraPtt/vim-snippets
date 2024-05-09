@@ -26,7 +26,7 @@ snippet f/ "italics"
 	*${1:Text}*$0
 snippet fb "Bold"
 	**${1:Text}**$0
-snippet --- Front matter
+snippet fm Front matter
 	---
 	$0
 	---
@@ -55,3 +55,24 @@ snippet clt "Callouts"
 
 snippet ls "list"
   - $0
+
+snippet lss "sub list"
+  ${1:  }- $0
+
+snippet lsss "sub sub list"
+  ${1:    }- $0
+
+snippet lc "checklist"
+  - [ ] $0
+
+snippet lcc "sub checklist"
+  ${1:  }- [ ] $0
+
+snippet lccc "sub sub checklist"
+  ${1:    }- [ ] $0
+
+snippet lo "ordered list"
+  1. $0
+
+snippet loo "sub ordered list"
+  ${1:  }1. $0
